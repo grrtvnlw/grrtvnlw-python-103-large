@@ -11,19 +11,21 @@ while counter >= 0:
     if counter != 0: # if user still has guesses left
         # prompt the user for input
         print(f"I am thinking of a number between 1 and 10. \nYou have {counter} guesses left.")
-        # update the input variable to hold user input
+        # update the input variable to hold user input and convert to int
         inp = int(input("What's the number? "))
         if inp == winning_num: 
             print("Yes! You win!")
-            play_again = input("Do you want to play again (Y or N)? ")
-            if play_again == "Y":
+            play_again = input("Do you want to play again (Y or N)? ").lower()
+            if play_again == "Y" or play_again == "y":
                 counter = 5 # reset counter to 5 
                 # have to reset winning number or else it will be the same as last game
                 winning_num = randint(1, 10)
                 continue
-            elif play_again == "N":
+            elif play_again == "N" or play_again == "n":
                 print("Bye!")
                 break # exit the loop
+        elif inp > 10 or inp < 0:
+            print("Pick a number between 1 and 10 goofball. Try again!")
         elif inp < winning_num:
             print(str(inp) + " is too low.") # f-string wouldn't work here
             counter -= 1 
@@ -33,13 +35,13 @@ while counter >= 0:
             counter -= 1 
             continue # try again, go back to the while loop
     elif counter == 0: # if user has run out of guesses
-        play_again = input("You lose. Do you want to play again (Y or N)? ")
-        if play_again == "Y":
+        play_again = input("You lose. Do you want to play again (Y or N)? ").lower()
+        if play_again == "Y" or play_again == "y":
             counter = 5 # reset counter to 5 
             # have to reset winning number or else it will be the same as last game
             winning_num = randint(1, 10)
             continue
-        elif play_again == "N":
+        elif play_again == "N" or play_again == "n":
             print("Bye!")
             break
             
