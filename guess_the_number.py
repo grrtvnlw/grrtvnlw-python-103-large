@@ -16,12 +16,12 @@ while counter >= 0:
         if inp == winning_num: 
             print("Yes! You win!")
             play_again = input("Do you want to play again (Y or N)? ").lower()
-            if play_again == "Y" or play_again == "y":
+            if play_again == "y":
                 counter = 5 # reset counter to 5 
                 # have to reset winning number or else it will be the same as last game
                 winning_num = randint(1, 10)
                 continue
-            elif play_again == "N" or play_again == "n":
+            elif play_again == "n":
                 print("Bye!")
                 break # exit the loop
         elif inp > 10 or inp < 0:
@@ -36,12 +36,12 @@ while counter >= 0:
             continue # try again, go back to the while loop
     elif counter == 0: # if user has run out of guesses
         play_again = input("You lose. Do you want to play again (Y or N)? ").lower()
-        if play_again == "Y" or play_again == "y":
+        if play_again == "y":
             counter = 5 # reset counter to 5 
             # have to reset winning number or else it will be the same as last game
             winning_num = randint(1, 10)
             continue
-        elif play_again == "N" or play_again == "n":
+        elif play_again == "n":
             print("Bye!")
             break
             
