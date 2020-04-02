@@ -9,7 +9,7 @@ winning_num = randint(1, 10)
 # Logic
 while counter >= 0:
     if counter != 0: # if user still has guesses left
-        # prompt the user for input
+        # prompt the user for input and show remaining guesses
         print(f"I am thinking of a number between 1 and 10. \nYou have {counter} guesses left.")
         # update the input variable to hold user input and convert to int
         inp = int(input("What's the number? "))
@@ -28,11 +28,11 @@ while counter >= 0:
             print("Pick a number between 1 and 10 goofball. Try again!")
         elif inp < winning_num:
             print(str(inp) + " is too low.") # f-string wouldn't work here
-            counter -= 1 
+            counter -= 1 # decrement guesses
             continue # try again, go back to the while loop
         elif inp > winning_num:
             print(str(inp) + " is too high.") # f-string wouldn't work here
-            counter -= 1 
+            counter -= 1 # decrement guesses
             continue # try again, go back to the while loop
     elif counter == 0: # if user has run out of guesses
         play_again = input("You lose. Do you want to play again (Y or N)? ").lower()
