@@ -29,11 +29,9 @@ while counter >= 0:
         elif inp < winning_num:
             print(str(inp) + " is too low.") # f-string wouldn't work here
             counter -= 1 # decrement guesses
-            continue # try again, go back to the while loop
         elif inp > winning_num:
             print(str(inp) + " is too high.") # f-string wouldn't work here
             counter -= 1 # decrement guesses
-            continue # try again, go back to the while loop
     elif counter == 0: # if user has run out of guesses
         play_again = input("You lose. Do you want to play again (Y or N)? ").lower()
         if play_again == "y":
