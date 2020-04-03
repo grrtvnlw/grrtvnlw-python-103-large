@@ -18,4 +18,4 @@ while counter <= inp:
 	else:
 		print(counter)
 	counter += 1.  # need to increment counter to the next number
-# need to print formatted outputs
+# need to print formatted output
