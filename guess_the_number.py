@@ -20,7 +20,7 @@ while counter >= 0:
                 counter = 5 # reset counter to 5 
                 # have to reset winning number or else it will be the same as last game
                 winning_num = randint(1, 10)
-                continue
+                continue # start the program again
             elif play_again == "n":
                 print("Bye!")
                 break # exit the loop
@@ -38,8 +38,8 @@ while counter >= 0:
             counter = 5 # reset counter to 5 
             # have to reset winning number or else it will be the same as last game
             winning_num = randint(1, 10)
-            continue
+            continue # start the program again
         elif play_again == "n":
             print("Bye!")
-            break
+            break # exit the loop
             
