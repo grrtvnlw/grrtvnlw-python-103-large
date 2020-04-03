@@ -4,6 +4,7 @@ inp = int(input("Give me a number: "))
 # need to count from 1 to the users input; setup a counter variable
 counter = 1
 while counter <= inp: 
+# need to print formatted output
 # need to test if counter is divisible by 3 and 5 and print “fizzbuzz” if it is
 # must test this case first or else it won’t execute
 	if counter % 3 == 0 and counter % 5 == 0:
@@ -16,6 +17,5 @@ while counter <= inp:
 		print("buzz")
 # need to print number value of counter variable 
 	else:
-		print(counter)
+		print(int(counter))
 	counter += 1.  # need to increment counter to the next number
-# need to print formatted output
