@@ -42,4 +42,3 @@ while counter >= 0:
         elif play_again == "n":
             print("Bye!")
             break # exit the loop
-            
